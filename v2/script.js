@@ -24,6 +24,7 @@ Chat = {
 		stroke: ('stroke' in $.QueryString ? parseInt($.QueryString.stroke) : false),
 		shadow: ('shadow' in $.QueryString ? parseInt($.QueryString.shadow) : false),
 		smallCaps: ('small_caps' in $.QueryString ? ($.QueryString.small_caps.toLowerCase() === 'true') : false),
+		oauth: ('oauth' in $.QueryString ? $.QueryString.oauth : false),
 		emotes: {},
 		badges: {},
 		userBadges: {},
@@ -363,7 +364,7 @@ Chat = {
 							$(this).remove();
 						});
 					}
-				}, 5000)
+				}, Chat.info.fade)
 			}
 
 			console.log('jChat: Connecting to IRC server...');
@@ -453,5 +454,12 @@ Chat = {
 };
 
 $(document).ready(function () {
-	Chat.connect($.QueryString.channel ? $.QueryString.channel.toLowerCase() : 'gioffyna');
+	if (Chat.info.oauth) {
+		Chat.connect($.QueryString.channel ? $.QueryString.channel.toLowerCase() : 'gioffyna');
+	} else {
+		console.log("Errore");
+		var $chatLine = $('<div>Error: Oauth not set</div>');
+		$chatLine.addClass('chat_line');
+		$('#chat_container').append($chatLine);
+	}
 });

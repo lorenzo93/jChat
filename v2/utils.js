@@ -34,7 +34,7 @@ function TwitchOAuth() {
 		type: "GET",
 		url: "https://id.twitch.tv/oauth2/validate",
 		dataType: "json",
-		headers: { 'Authorization': 'Bearer ' + credentials },
+		headers: { 'Authorization': 'Bearer ' + Chat.info.oauth },
 		success: function (result) {
 			//set your variable to the result
 			console.log('jChat: helix json aquired user_id');
@@ -55,7 +55,7 @@ function TwitchAPI(url) {
 		url: "https://api.twitch.tv/helix" + url,
 		dataType: "json",
 		headers: {
-			'Authorization': 'Bearer ' + credentials,
+			'Authorization': 'Bearer ' + Chat.info.oauth,
 			'Client-Id': client_id
 		},
 		success: function () {
