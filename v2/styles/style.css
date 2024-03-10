@@ -1,55 +1,69 @@
-body {
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-    position: relative;
+svg,
+foreignObject,
+body,
+.shape {
+	margin: 0px;
+	width: 378px;
+	height: 617px;
 }
 
-#chat_container {
-    width: calc(100% - 20px);
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-    background-color: transparent;
-    color: white;
-    font-weight: 800;
-    word-break: break-word;
+.shape {
+	width: 189px;
+}
+
+.shape-left {
+	float: left;
+	shape-outside: url(oval-left.svg);
+}
+
+.shape-right {
+	float: right;
+	shape-outside: url(oval-right.svg);
+}
+
+.text {
+	font-size: 10px;
+	text-align: center;
+	line-height: 1.6;
+	color: green;
+	font-family: 'Lato';
+	hyphens: auto;
+	text-shadow: 0 .2px .3px rgba(0, 0, 0, .3);
 }
 
 .user_info {
-    display: inline-block;
+	display: inline-block;
 }
 
 .badge {
-    vertical-align: middle;
-    border-radius: 10%;
+	vertical-align: middle;
+	border-radius: 10%;
 }
 
 .zero-width_container {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
 }
 
 .cheer_bits {
-    font-size: 0.6em;
-    -webkit-text-stroke: 1px black;
+	font-size: 0.6em;
+	-webkit-text-stroke: 1px black;
 }
 
 .emote {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 .zero-width {
-    position: absolute;
+	position: absolute;
 }
 
 .emoji {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
