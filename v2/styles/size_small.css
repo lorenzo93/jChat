@@ -1,14 +1,10 @@
-#chat_container {
-	font-size: 10px;
-}
-
 .chat_line {
 	line-height: 15px;
 }
 
 .badge {
-	width: 10px;
-	height: 10px;
+	width: 13px;
+	height: 13px;
 	margin-right: 2px;
 	margin-bottom: 3px;
 }
@@ -28,20 +24,20 @@
 }
 
 .cheer_emote {
-	max-height: 10px;
+	max-height: 13px;
 	margin-bottom: -6px;
 }
 
 .emote {
 	max-width: 75px;
-	max-height: 10px;
+	max-height: 13px;
 	margin-right: -2px;
 }
 
 .upscale {
-	height: 10px;
+	height: 13px;
 }
 
 .emoji {
-	height: 10px;
+	height: 13px;
 }

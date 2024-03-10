@@ -22,10 +22,11 @@ body,
 }
 
 .text {
-	font-size: 10px;
+	font-size: 13px;
 	text-align: center;
+	font-weight: bold;
 	line-height: 1.6;
-	color: green;
+	color: white;
 	font-family: 'Lato';
 	hyphens: auto;
 	text-shadow: 0 .2px .3px rgba(0, 0, 0, .3);
